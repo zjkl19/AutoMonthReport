@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoMonthReport"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="600">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="20,20,0,0" Grid.Row="1" VerticalAlignment="Top" Name="StartDate"/>
+
+        <DatePicker Grid.Column="3" HorizontalAlignment="Left" Margin="20,20,0,0" Grid.Row="1" VerticalAlignment="Top" Name="EndDate"/>
+
+        <Button Grid.Row="2" Grid.Column="1" Margin="10" Click="AutoReport_Click">自动生成报告</Button>
+        <Label Content="起始日期" HorizontalAlignment="Left" Margin="40,20,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="2" Content="终止日期" HorizontalAlignment="Left" Margin="40,20,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
